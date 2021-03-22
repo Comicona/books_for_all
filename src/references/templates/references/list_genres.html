@@ -1,0 +1,18 @@
+{% extends "references/list_template.html" %}
+
+{% block title %}
+    Справочник "Жанры"
+{% endblock title %}
+
+{% block page_header %}
+    Жанры
+{% endblock page_header %}
+
+{% block ref_actions %}
+    <a title="Edit" href="{% url 'references:genre-update' object.pk %}"><i class="bi bi-pencil-square"></i></a>
+    <a title="Delete" href="{% url 'references:genre-delete' object.pk %}"><i class="bi bi-trash"></i></a>
+{% endblock ref_actions %}
+
+{% block ref_create %}
+    <a href="{% url 'references:genre-create' %}" class="btn btn-primary" style="width: 200px;">Создать</a><br><br>
+{% endblock ref_create %}

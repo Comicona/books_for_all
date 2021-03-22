@@ -1,0 +1,18 @@
+{% extends "references/list_template.html" %}
+
+{% block title %}
+    Справочник "Серии"
+{% endblock title %}
+
+{% block page_header %}
+    Серии
+{% endblock page_header %}
+
+{% block ref_actions %}
+    <a title="Edit" href="{% url 'references:series-update' object.pk %}"><i class="bi bi-pencil-square"></i></a>
+    <a title="Delete" href="{% url 'references:series-delete' object.pk %}"><i class="bi bi-trash"></i></a>
+{% endblock ref_actions %}
+
+{% block ref_create %}
+    <a href="{% url 'references:series-create' %}" class="btn btn-primary" style="width: 200px;">Создать</a><br><br>
+{% endblock ref_create %}
